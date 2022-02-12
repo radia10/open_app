@@ -1,2 +1,2 @@
 # Jokes-App
-🟢 Live Demo : https://radia10.github.io/open_app/
+🟢 Live Demo : https://open-app-alpha.vercel.app/
