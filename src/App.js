@@ -3,6 +3,8 @@ import './App.css';
 import Banner from './composants/Banner';
 import Cart from './composants/Cart';
 import ShoppingList from './composants/ShoppingList';
+import Footer from './composants/Footer';
+
 //import QuestionForm from './composants/QuestionForm';
 
 import './styles/app.scss';
@@ -22,6 +24,7 @@ function App() {
   <Banner />
   <div id="card"><Cart cart={cart} updateCart={updateCart} /></div>
   <div id='shop'><ShoppingList cart={cart} updateCart={updateCart}/></div>
+  <Footer/>
  
   </div>
 
