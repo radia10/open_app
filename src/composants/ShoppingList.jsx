@@ -39,7 +39,7 @@ function ShoppingList({ cart, updateCart }) {
                     water={water}
                     light={light}
                 />
-                <button onClick={() => addToCart(name,price)}>Ajouter</button>
+                <button className='aj' onClick={() => addToCart(name,price)}>Ajouter</button>
                 </div>
             ))}
         </ul>
