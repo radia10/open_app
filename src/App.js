@@ -1,18 +1,30 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Banner from './composants/Banner';
+import Cart from './composants/Cart';
+import ShoppingList from './composants/ShoppingList';
+//import QuestionForm from './composants/QuestionForm';
+
+import './styles/app.scss';
+import { useState,useEffect } from 'react';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         hhh
-        </p>
-        
-      </header>
-    </div>
-  );
+  //const [cart, updateCart] = useState([])
+  const savedCart = localStorage.getItem('cart')
+	const [cart, updateCart] = useState(savedCart ? JSON.parse(savedCart) : [])
+
+	useEffect(() => {
+		localStorage.setItem('cart', JSON.stringify(cart))
+	}, [cart])
+  return <div>
+  <Banner />
+  <div id="card"><Cart cart={cart} updateCart={updateCart} /></div>
+  <div id='shop'><ShoppingList cart={cart} updateCart={updateCart}/></div>
+ 
+  </div>
+
 }
 
 export default App;
